@@ -1,3 +1,5 @@
+import { saveToFavorites } from "./favorites"
+
 export function renderRecipeCards(meals) {
     const container = document.getElementById('recipes-container')
     container.innerHTML = ''
@@ -11,7 +13,13 @@ export function renderRecipeCards(meals) {
         <h3>${meal.strMeal}</h3>
         <p>Area: ${meal.strArea}</p>
         <button>View More</button>
+        <button class="fav-btn" data-id="${meal.idMeal}">💖Save</button>
         `
+
+        const favButton = card.querySelector('.fav-btn')
+        favButton.addEventListener('click', () => {
+            saveToFavorites(meal)
+        })
 
         container.appendChild(card)
     })

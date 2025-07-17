@@ -1,0 +1,20 @@
+✅ 如果你以後在 JavaScript 裡面要「從一堆資料中找出某個符合條件的項目」，
+你真的只要記住這個公式就夠了：
+const result = array.find(item => item.條件)
+
+🔍 你可以照這個「人腦模版」套進去用：
+「我在一個陣列裡找某一筆資料，條件是 xxx，找到了就給我那一筆！」
+
+🔁 馬上來幾個實例讓你超快記住
+🥦 食譜實例（你現在做的）
+const recipe = recipes.find(meal => meal.idMeal === '52772')
+「我想找 id 是 52772 的那一道食譜」
+
+👤 找人資料
+const user = users.find(person => person.email === 'abc@gmail.com')
+「在一堆 user 裡面，找 email 是 abc@gmail.com 的那個人」
+
+📦 找產品
+const product = products.find(p => p.sku === 'ABC123')
+「從所有商品裡，找出貨號是 ABC123 的那一個」
+
