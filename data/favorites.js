@@ -1,12 +1,12 @@
-export function saveToFavorites(meal) {
+export function saveToFavorites(meal, button) {
     const existing = JSON.parse(localStorage.getItem('favorites')) || []
     const exists = existing.find(item => item.idMeal === meal.idMeal)
 
     if (!exists) {
         existing.push(meal)
         localStorage.setItem('favorites', JSON.stringify(existing))
-        alert(`Saved ${meal.strMeal} !`)
+        button.textContent = '✅Saved!'
     } else {
-        alert(`This meal was saved before!`)
+        button.textContent = '✅Saved Before!'
     }
 }

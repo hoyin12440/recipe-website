@@ -18,7 +18,7 @@ export function renderRecipeCards(meals) {
 
         const favButton = card.querySelector('.fav-btn')
         favButton.addEventListener('click', () => {
-            saveToFavorites(meal)
+            saveToFavorites(meal, favButton)
         })
 
         container.appendChild(card)
